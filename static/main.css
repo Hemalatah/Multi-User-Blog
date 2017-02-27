@@ -1,0 +1,179 @@
+body {
+	background-color: #FAFAFA; 
+}
+
+.nav {
+	list-style: none;
+	margin-right: 150px;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	justify-content: flex-end;
+}
+.nav li {
+	padding: 10px;
+	margin-top: 15px;
+}
+
+.nav li a, .blog-list span a {
+	text-decoration: none;
+	color: #333;
+}
+
+.nav li:last-child {
+	margin-left: -15px;
+}
+
+#title {
+	margin-right: 50%;
+	font-size: 30px;
+	margin-top: 0;
+}
+
+hr {
+	width: 75%;
+	color: #333;
+}
+
+.blog-list, .comment {
+	margin-left: 15%;
+	width: 65%;
+	list-style: none;
+	background-color: #fff;
+	padding: 10px;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	border-radius: 5px;
+}
+
+.your-response, .comment {
+	margin-bottom: 20px;
+}
+
+.your-response {
+	margin-left: 15%;
+}
+
+.your-response a, .comment a {
+	text-decoration: none;
+	color: #333;
+}
+
+.blog-list h1 a, .blog-list h6 a, .remove-post a, .error-like a, .new-comment form a {
+	text-decoration: none;
+	color: #333;
+}
+
+.blogger {
+	color: #70db70;
+	margin-left: 70px;
+}
+
+.date {
+	display: block;
+	color: #777;
+	margin-left: 70px;
+	width: 90px;
+	font-size: 12px;
+}
+
+.blog-list span {
+	padding: 5px;
+}
+
+.blog-list p {
+	font-size: 20px;
+}
+
+.user {
+	width: 50px;
+	height: 50px;
+	margin: 5px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	border-radius: 50%;
+	border: 1px solid #eee;
+	box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);
+	background-image: url('/static/img/profileImage.png')
+}
+
+.user, .blogger, .date {
+	display: inline-block;
+}
+
+.likes {
+	margin-left: 70%;
+}  
+
+.new-post, .signup, .login, .error-like, .new-comment {
+	margin-left: 17%;
+}
+
+.comment-count {
+	margin-left: 15%;
+	padding: 40px 0 20px 0;
+	font-weight: bold;
+}
+
+.remove-post, .error-like {
+	margin-left: 35%;
+	margin-top: 5%;
+	transition: 
+}
+
+.remove-post a, .error-like a {
+	margin-left: 5%;
+}
+
+.new-post form input, .new-post form textarea,.new-comment form input, .new-comment form textarea, .signup form input, .login form input {
+	width: 50%;
+	padding: 10px;
+	margin: 20px;
+	outline: none;
+	border: 1px solid #eee;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	border-radius: 5px;
+	font-size: 15px;
+}
+
+.new-post form input, .new-comment form input {
+	font-size: 25px;
+}
+
+#submit {
+	width: 12%;
+	height: 30px;
+	padding: 0;
+	font-size: 15px;
+	color: #fff;
+	background-color: #999;
+}
+
+/* Signup form */    
+.error {
+	color: red;
+	display: block;
+	margin-left: 2%;
+}
+
+.side-title {
+	font-size: 30px;
+}
+
+.signup form label, .login form label {
+	font-size: 17px;
+}
+
+/* welcome page */
+
+.pull-left {
+	margin-right: 1%;
+}
+
+
+
+
+
+
+
+
+
