@@ -1,0 +1,29 @@
+{% extends "main.html" %}
+
+{% block content %}
+
+	<div class="new-post">
+		<form method="post">
+			<div>
+				<label>
+					<input type="text" name="title" placeholder="Title" value="{{title}}" autofocus="True">
+				</label>
+			</div>
+			<div>
+				<label>
+					<textarea name="story" rows="14" placeholder="Tell your story...">{{story}}</textarea>
+				</label>
+			</div>
+			
+			<input type="hidden" name="blogger" value="{{user.name}}">
+
+			<div class="error">{{error}}</div>
+			<div>
+				<label>
+					<input type="submit" id="submit">
+				</label>
+			</div>	
+		</form>
+	</div>
+
+{% endblock %}

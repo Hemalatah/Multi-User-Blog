@@ -1,0 +1,21 @@
+{% extends "main.html" %}
+
+{% block content %}		
+<h3 class="your-response">Write a Response</h3> 
+<div class="comment">
+<a href="/blog/{{pkey.id()}}">{{title}}</a>
+    <p>{{story}}</p>
+</div>
+<div class="new-comment">
+	<form method="post">
+	    <label>
+	        <textarea name="comment" placeholder="your response..." rows="14" autofocus="true">{{comment}}</textarea>
+	        <input type="hidden" name="blogger" value="{{user.name}}">
+	    </label>
+
+	    <div class="error">{{error}}</div>
+
+	    <input id="submit" type="submit">
+	</form>
+</div>
+{% endblock %}

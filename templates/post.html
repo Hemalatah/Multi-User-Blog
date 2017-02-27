@@ -1,0 +1,11 @@
+
+<li class="blog-list">
+	<div class="user">
+	<span class="blogger">{{p.blogger}}</span>
+	<span class="date">{{p.created.strftime("%b %d, %Y")}}</span></div>
+	<h1><a href="/blog/{{p.key().id()}}">{{p.title}}</a></h1>
+	<p>{{p._render_text | safe}}</p>
+	<h6><a href="/blog/{{p.key().id()}}">Read more...</a></h6>
+	<span class="likes"><a href="/blog/{{p.key().id()}}/like-post"><img src="/static/img/like.png"></a> {{p.likes}}</span>
+	<span><a href="/blog/{{p.key().id()}}"><img src="/static/img/responses.png"> {{p.comments.count()}}</a> responses</span>
+</li>

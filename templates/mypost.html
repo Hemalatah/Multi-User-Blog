@@ -1,0 +1,36 @@
+{% extends "main.html" %}
+
+{% block content %}
+<li class="blog-list">
+	<div class="user">
+    <span class="blogger">{{post.blogger}}</span>
+    <span class="date">{{post.created.strftime("%b %d, %Y")}}</span></div>
+    <h1><a href="/blog/{{post.key().id()}}">{{post.title}}</a></h1>
+    <p>{{post.story}}</p>
+    <h6><a href="/blog/{{post.key().id()}}">Read more...</a></h6>
+	<span><a href="/blog/{{post.key().id()}}/edit-post"><img src="/static/img/edit.png"> Edit</a></span>
+	<span><a href="/blog/{{post.key().id()}}/remove-post"><img src="/static/img/delete.png"> Delete</a></span>
+</li>
+{% if user and post.comments %}
+<div class="comment-count">
+    <span>Responses</span>
+</div>
+
+<div class="your-response"><a href="/blog/{{post.key().id()}}/new-comment">write a response...</a></div>
+<div class="post-comments">
+    {% for c in post.comments %}
+    <div class="comment">
+        <div class="comment-blogger">{{ c.parent().name }} says:</div>
+        <p class="comment-content">{{ c.comment }}</p>
+        {% if user.name == c.blogger %}
+        <span><a href="/blog/{{post.key().id()}}/update-comment/{{c.key().id()}}"><img src="/static/img/update.png"> Update</a></span>
+       
+        <span><a href="/blog/{{post.key().id()}}/delete-comment/{{c.key().id()}}"><img src="/static/img/delete.png"> Delete</a></span>
+        {% endif %}
+    </div>
+    {% endfor %}
+</div>
+{% endif %}
+{% endblock %}
+		
+	

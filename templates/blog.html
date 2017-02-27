@@ -1,0 +1,66 @@
+{% extends "main.html" %}
+
+{% block content %}
+
+	<ul>
+	{% for p in posts %}
+		{{p.render() | safe}}
+		<br><br>
+	{% endfor %}
+	</ul>
+
+<!--<ul class="blog-list">
+	<li>
+		<h1>Blog Title</h1>
+		<h5> posted by Blogger Name</h5>
+		<h5> month date</h5>
+		<p>Blog body: <br> 
+		In one generation, the Internet went from opening up new free markets to creating a series of Fake Markets that exploit society, without most media or politicians even noticing.</p>
+		<h6>Read more...</h6>
+		<span><img src="like.png"> count</span>
+		<span><img src="responses.png"> responses</span>
+	</li>
+	<li>
+		<h1>Blog Title</h1>
+		<h5> posted by Blogger Name</h5>
+		<h5> month date</h5>
+		<p>Blog body: <br> 
+		In one generation, the Internet went from opening up new free markets to creating a series of Fake Markets that exploit society, without most media or politicians even noticing.</p>
+		<h6>Read more...</h6>
+		<span><img src="like.png"> count</span>
+		<span><img src="responses.png"> responses</span>
+	</li>
+	<li>
+		<h1>Blog Title</h1>
+		<h5> posted by Blogger Name</h5>
+		<h5> month date</h5>
+		<p>Blog body: <br> 
+		In one generation, the Internet went from opening up new free markets to creating a series of Fake Markets that exploit society, without most media or politicians even noticing.</p>
+		<h6>Read more...</h6>
+		<span><img src="like.png"> count</span>
+		<span><img src="responses.png"> responses</span>
+	</li>
+	<li>
+		<h1>Blog Title</h1>
+		<h5> posted by Blogger Name</h5>
+		<h5> month date</h5>
+		<p>Blog body: <br> 
+		In one generation, the Internet went from opening up new free markets to creating a series of Fake Markets that exploit society, without most media or politicians even noticing.</p>
+		<h6>Read more...</h6>
+		<span><img src="like.png"> count</span>
+		<span><img src="responses.png"> responses</span>
+	</li>
+	<li>
+		<h1>Blog Title</h1>
+		<h5> posted by Blogger Name</h5>
+		<h5> month date</h5>
+		<p>Blog body: <br> 
+		In one generation, the Internet went from opening up new free markets to creating a series of Fake Markets that exploit society, without most media or politicians even noticing.</p>
+		<h6>Read more...</h6>
+		<span><img src="like.png"> count</span>
+		<span><img src="responses.png"> responses</span>
+	</li>
+<ul>-->
+
+
+{% endblock %}

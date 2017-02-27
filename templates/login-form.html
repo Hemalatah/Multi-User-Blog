@@ -1,0 +1,31 @@
+{% extends "main.html" %}
+
+{% block content %}
+    <div class="login">
+        <h3 class="side-title">Sign in</h3>
+        <form method="post">
+            <div>
+                <label class="label">Username<br>
+                    <input type="text" name="username" value="{{username}}">
+                    <em class="error">
+                      {{error_username}}
+                    </em>
+                </label>
+            </div>
+            <div>
+                <label class="label">Password<br>
+                    <input type="password" name="password" value="">
+                    <em class="error">
+                        {{error_password}}
+                    </em>
+                </label>
+            </div>
+            <div class="error">
+              {{error}}
+            </div>
+
+            <input id="submit" type="submit">
+        </form>
+    </div>
+
+{% endblock %}

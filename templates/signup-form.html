@@ -1,0 +1,44 @@
+{% extends "main.html" %}
+
+{% block content %}
+    <div class="signup">
+        <h3 class="side-title">Sign up</h3>
+        <form method="post">
+            <div>
+                <label class="label">Username<br>
+                    <input type="text" name="username" value="{{username}}">
+                    <em class="error">
+                      {{error_username}}
+                    </em>
+                </label>
+            </div>
+            <div>
+                <label class="label">Password<br>
+                    <input type="password" name="password" value="">
+                    <em class="error">
+                        {{error_password}}
+                    </em>
+                </label>
+            </div>
+            <div>
+                <label class="label">Verify Password<br>
+                    <input type="password" name="verify" value="">
+                    <em class="error">
+                        {{error_verify}}
+                    </em>
+                </label>
+            </div>
+            <div>
+                <label class="label">Email (optional)<br>
+                    <input type="text" name="email" value="{{email}}">
+                    <em class="error">
+                        {{error_email}}
+                    </em>
+                </label>
+            </div>
+
+            <input id="submit" type="submit">
+        </form>
+    </div>
+
+{% endblock %}
