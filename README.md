@@ -2,6 +2,8 @@
 
 ### About the project...
  In this project you will be building a multi user blog where users can sign in and post blog posts as well as 'Like' and 'Comment' on other posts made on the blog. You will be hosting this blog on Google App Engine and you will also be creating an authentication system for users to be able to register and sign in and then create blog posts!
+ 
+ Checkout the [live](https://multi-user-blog-160020.appspot.com/blog) version of this project.
 
 ### To run the Application in your local machine...
 
