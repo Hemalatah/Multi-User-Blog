@@ -10,10 +10,11 @@
 * Have Python 2 and Google App Engine installed in the root directory
 * git clone the repo
 * get the repo as a current working directory in your terminal
-* in your terminal, run the google app engine locally by typing 
+* In your terminal, run the google app engine locally by typing 
 ```sh
 $ dev_appserver.py .
 ```
+
 * Browse the blog site in the localhost, port number: 8000 as a default
 
 ### About the files...
