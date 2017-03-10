@@ -14,27 +14,30 @@ from handlers.blog import *
 
 from google.appengine.ext import db
 
+
 def render_post(response, post):
-	response.out.write('<b>' + post.title + '</b><br>')
-	response.out.write(post.story)
+    response.out.write('<b>' + post.title + '</b><br>')
+    response.out.write(post.story)
+
 
 class MainPage(Handler):
-	def get(self):
-		self.write('Hello, Udacity!')
+    def get(self):
+        self.write('Hello, Udacity!')
 
 app = webapp2.WSGIApplication([('/', MainPage),
-							   ('/blog/?', BlogFront),
-							   ('/blog/([0-9]+)', PostPage),
-							   ('/blog/new-post', NewPost),
-							   ('/blog/([0-9]+)/remove-post', RemovePost),
-							   ('/blog/([0-9]+)/edit-post', EditPost),
-							   ('/blog/([0-9]+)/like-post', LikePost),
-							   ('/error', Error),
-							   ('/user-error', UserError),
-							   ('/blog/([0-9]+)/new-comment', NewComment),
-							   ('/blog/([0-9]+)/update-comment/([0-9]+)', UpdateComment),
-							   ('/blog/([0-9]+)/delete-comment/([0-9]+)', DeleteComment),
-							   ('/signup', Register),
+                               ('/blog/?', BlogFront),
+                               ('/blog/([0-9]+)', PostPage),
+                               ('/blog/new-post', NewPost),
+                               ('/blog/([0-9]+)/remove-post', RemovePost),
+                               ('/blog/([0-9]+)/edit-post', EditPost),
+                               ('/blog/([0-9]+)/like-post', LikePost),
+                               ('/error', Error),
+                               ('/user-error', UserError),
+                               ('/blog/([0-9]+)/new-comment', NewComment),
+                               ('/blog/([0-9]+)/update-comment/([0-9]+)', Updat
+                                eComment),
+                               ('/blog/([0-9]+)/delete-comment/([0-9]+)', Delet
+                                eComment),
+                               ('/signup', Register),
                                ('/login', Login),
-                               ('/logout', Logout)],
-                               debug=True)
+                               ('/logout', Logout)], debug=True)
