@@ -1,6 +1,7 @@
 from models import users
 from handler import *
 
+
 class Login(Handler):
     def get(self):
         self.render('login-form.html')
@@ -15,9 +16,11 @@ class Login(Handler):
             self.redirect('/blog')
         else:
             msg = 'Invalid login'
-            self.render('login-form.html', error = msg)
+            self.render('login-form.html', error=msg)
+
 
 class Logout(Handler):
     def get(self):
         self.logout()
         self.redirect('/blog')
+
